@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box !important;
+    color: #fff !important;
+    transition: all .5s;
+}
+
+.light-mode {
+    color: #000 !important;
+}
+
+.input-group {
+    width: 600px;
+}
+
+input::placeholder {
+    color: #fff !important;
+}
+
+.menu-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
