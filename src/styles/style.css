@@ -26,6 +26,12 @@ input::placeholder {
     display: none;
 }
 
-.active {
-    display: block;
+.test {
+    background-color: #5050;
+}
+
+@media (max-width: 950px) {
+    .input-group {
+        width: 50%;
+    }
 }

@@ -1,12 +1,21 @@
 const hamburguerMenu = document.querySelector('.nav-btn')
 const input = document.querySelector('input')
-const inputButton = document.querySelector('[name="input-button"]')
+const inputButton = document.querySelector('#input-button')
 const menuDescription = document.getElementsByName('item-description')
 const backgroundSections = document.getElementsByName('section')
 const clickChangeMode = document.querySelector('.page-mode')
 const sunIcon = document.querySelector('.sunlight')
 const moonIcon = document.querySelector('.moonlight')
+const form = document.querySelector('form')
+
 let modeIsLight = false;
+
+
+
+const card = document.querySelectorAll('.card-body')
+const cardArray = [...card]
+
+console.log(cardArray)
 
 const changeTextStyle = document.querySelectorAll('i, h2, h5, p')
 
@@ -44,4 +53,26 @@ clickChangeMode.addEventListener('click', () => {
             menuDescription.forEach(item => item.classList.remove('light-mode'))
         })
     }
+})
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    if(input.value !== ''){
+        cardArray.forEach(card =>{
+            let title = card.querySelector('h5')
+            title = title.textContent.toLowerCase()
+            let filteredText = input.value.toLowerCase()
+            
+            if(title.includes(filteredText)){
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        })
+    } else {
+        cardArray.forEach(card => {
+            card.style.display = 'block';
+        })
+    }
+    input.value = ''
 })
