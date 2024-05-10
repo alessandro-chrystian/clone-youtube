@@ -7,15 +7,10 @@ const clickChangeMode = document.querySelector('.page-mode')
 const sunIcon = document.querySelector('.sunlight')
 const moonIcon = document.querySelector('.moonlight')
 const form = document.querySelector('form')
-
-let modeIsLight = false;
-
-
-
 const card = document.querySelectorAll('.card-body')
 const cardArray = [...card]
 
-console.log(cardArray)
+let modeIsLight = false;
 
 const changeTextStyle = document.querySelectorAll('i, h2, h5, p')
 
